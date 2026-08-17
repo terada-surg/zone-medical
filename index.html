@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZONE MEDICAL｜細胞医学でアスリートに革新を。</title>
+<meta name="description" content="努力は、足りている。見えていないのは、身体の中だ。分子栄養学を専門とする医師が、細胞の状態を見える化し、12ヶ月のロードマップで競技パフォーマンスを設計する。ハイパフォーマンス・アスリート専門プログラム ZONE MEDICAL。">
+<style>
+  :root{
+    --teal:#006D82; --teal-d:#00566A; --teal-l:#3FA8BE; --cyan:#8FD7E9;
+    --blue:#0469AC; --navy:#0D1A2B; --deep:#031A26;
+    --ink:#333333; --muted:#77828C; --line:#E6EBEE; --snow:#F6F6F6; --wash:#F1F8FA;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","Yu Mincho",serif;
+    background:#fff;color:var(--ink);line-height:1.95;
+    -webkit-font-smoothing:antialiased;padding-bottom:74px;overflow-x:hidden;
+    font-size:16px;letter-spacing:.05em;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 26px;}
+  .serif-en{font-family:"Didot","Bodoni 72","Playfair Display","Times New Roman",serif;}
+  h1,h2,h3,h4,p,li,dt,dd,button,.txt,.g-lab{line-break:strict;word-break:auto-phrase;}
+  .np{display:inline-block;}
+  img{max-width:100%;display:block;}
+
+  /* ===== セクション見出し ===== */
+  section{padding:96px 0 0;}
+  .head{position:relative;text-align:center;margin-bottom:50px;}
+  .head .wm{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-58%);
+    font-size:clamp(50px,13vw,116px);letter-spacing:.04em;line-height:1;
+    color:#0D1A2B;opacity:.045;white-space:nowrap;pointer-events:none;user-select:none;
+  }
+  .head .en{position:relative;font-size:clamp(23px,5.6vw,31px);font-weight:700;letter-spacing:.05em;color:var(--teal);line-height:1.3;}
+  .head .jp{position:relative;font-size:14px;font-weight:700;letter-spacing:.07em;color:var(--teal);margin-top:4px;}
+  .head .bar{position:relative;width:88px;height:1.5px;background:var(--teal);margin:18px auto 0;opacity:.85;}
+  .head.on-dark .wm{color:#fff;opacity:.075;}
+  .head.on-dark .en,.head.on-dark .jp{color:#fff;}
+  .head.on-dark .bar{background:#fff;}
+
+  h2.lead-jp{font-size:clamp(21px,5.2vw,26px);font-weight:700;color:var(--navy);letter-spacing:.06em;line-height:1.75;margin-bottom:26px;}
+  h2.lead-jp .t{color:var(--teal);}
+  .body-t{font-size:15.5px;line-height:2.1;letter-spacing:.05em;}
+  .body-t + .body-t{margin-top:20px;}
+  .body-t strong{font-weight:700;color:var(--navy);}
+  .note{font-size:12.5px;color:var(--muted);line-height:1.85;margin-top:16px;}
+
+  /* ===== FV ===== */
+  .topbar{background:#fff;padding:18px 26px;text-align:center;}
+  .topbar .m{font-size:clamp(8px,2.1vw,11px);letter-spacing:clamp(.18em,.9vw,.42em);color:var(--teal);text-indent:.3em;white-space:nowrap;}
+  .fv-card{
+    border-radius:0 0 40px 40px;overflow:hidden;
+    background:linear-gradient(180deg,#F7FBFC 0%,#EAF5F8 100%);
+    max-width:1600px;margin:0 auto;
+  }
+  .fv-card img{width:100%;height:auto;display:block;}
+  .logotype{text-align:center;padding:8px 26px 0;}
+  .logotype img{width:min(72%,420px);margin:0 auto;}
+  .fv-copy{padding:42px 26px 74px;max-width:760px;margin:0 auto;text-align:center;}
+  h1{font-size:clamp(24px,6.6vw,40px);font-weight:700;color:var(--navy);line-height:1.7;letter-spacing:.045em;}
+  h1 .t{color:var(--teal);}
+  .fv-sub{margin-top:24px;font-size:clamp(14px,3.6vw,16px);color:var(--muted);line-height:2.15;letter-spacing:.05em;}
+  .fv-sub strong{color:var(--navy);font-weight:700;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:28px;}
+  .chip{border:1px solid rgba(0,109,130,.3);border-radius:999px;padding:6px 16px;font-size:11.5px;letter-spacing:.09em;color:var(--teal);}
+
+  /* ===== 濃色 ===== */
+  .dark{background:linear-gradient(180deg,#0F2537 0%,#031A26 100%);color:#D7E3E9;margin-top:96px;padding:88px 0 92px;}
+  .dark h2.lead-jp{color:#fff;}
+  .dark h2.lead-jp .t{color:var(--cyan);}
+  .dark .body-t{color:#AFC0CA;}
+  .dark .body-t strong{color:#fff;}
+  .dark .note{color:#7E939F;}
+
+  /* ===== VISION 3本柱 ===== */
+  .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:36px;}
+  .pil{border:1px solid rgba(143,215,233,.25);border-radius:14px;padding:26px 22px;text-align:center;background:rgba(255,255,255,.04);}
+  .pil .n{font-size:11px;letter-spacing:.26em;color:var(--cyan);margin-bottom:10px;}
+  .pil h4{font-size:17px;color:#fff;font-weight:700;letter-spacing:.06em;line-height:1.6;margin-bottom:9px;}
+  .pil p{font-size:13px;color:#94A9B5;line-height:1.9;letter-spacing:.02em;}
+
+  /* ===== 症状インタラクション ===== */
+  .sym-tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:24px;}
+  .sym-tabs button{font-family:inherit;font-size:13.5px;letter-spacing:.04em;color:var(--navy);background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 17px;cursor:pointer;transition:all .18s;line-height:1.5;}
+  .sym-tabs button:hover{border-color:var(--teal-l);}
+  .sym-tabs button[aria-selected="true"]{background:var(--teal);border-color:var(--teal);color:#fff;}
+  .sym-panel{border:1px solid var(--line);border-radius:14px;background:#fff;padding:30px 26px;box-shadow:0 16px 44px rgba(13,26,43,.05);}
+  .sym-panel .q{font-size:15px;color:var(--muted);letter-spacing:.05em;}
+  .sym-panel .q b{color:var(--navy);font-weight:700;}
+  .sym-panel .arrow{width:1px;height:26px;background:var(--teal-l);margin:16px auto;opacity:.7;}
+  .sym-panel .cause-label{font-size:11px;letter-spacing:.24em;color:var(--teal);text-align:center;margin-bottom:12px;}
+  .sym-panel ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
+  .sym-panel li{font-size:13.5px;letter-spacing:.03em;color:var(--navy);background:var(--wash);border-radius:8px;padding:8px 14px;line-height:1.6;}
+  .sym-panel .test{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);text-align:center;font-size:13.5px;color:var(--muted);letter-spacing:.04em;line-height:1.9;}
+  .sym-panel .test b{color:var(--teal);font-weight:700;}
+
+  /* ===== 3層 ===== */
+  .layers3{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:34px;}
+  .l3{padding:22px 24px;display:flex;gap:18px;align-items:flex-start;border-bottom:1px solid var(--line);}
+  .l3:last-child{border-bottom:none;}
+  .l3 .n{flex:0 0 auto;font-size:11px;letter-spacing:.18em;color:var(--teal-l);padding-top:5px;min-width:58px;}
+  .l3 h4{font-size:16px;color:var(--navy);font-weight:700;letter-spacing:.05em;margin-bottom:5px;}
+  .l3 p{font-size:13.5px;color:var(--muted);line-height:1.9;letter-spacing:.03em;}
+  .l3.now{background:var(--wash);}
+  .l3.now .n,.l3.now h4{color:var(--teal);}
+
+  /* ===== ASSET ===== */
+  .asset-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:34px;}
+  .as{border:1px solid var(--line);border-radius:13px;padding:20px 18px;background:#fff;}
+  .as .n{font-size:10.5px;letter-spacing:.22em;color:var(--teal-l);margin-bottom:7px;}
+  .as h4{font-size:14.5px;color:var(--navy);font-weight:700;letter-spacing:.04em;line-height:1.6;margin-bottom:6px;}
+  .as p{font-size:12.5px;color:var(--muted);line-height:1.85;letter-spacing:.02em;}
+  .converge{display:flex;flex-direction:column;align-items:center;margin-top:22px;}
+  .converge .down{width:1px;height:30px;background:var(--teal-l);opacity:.6;}
+  .core{
+    border:1.5px solid var(--teal);border-radius:16px;background:var(--wash);
+    padding:26px 30px;text-align:center;margin:8px 0;min-width:min(100%,320px);
+  }
+  .core .en{font-size:11px;letter-spacing:.26em;color:var(--teal);margin-bottom:6px;}
+  .core b{display:block;font-size:19px;color:var(--navy);font-weight:700;letter-spacing:.07em;}
+  .core small{display:block;font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.8;}
+  .next-b{border:1px solid var(--line);border-radius:12px;padding:16px 26px;text-align:center;font-size:14.5px;color:var(--navy);font-weight:700;letter-spacing:.06em;}
+
+  /* ===== COMMITMENT ===== */
+  .com{display:grid;grid-template-columns:1fr;gap:0;border:1px solid rgba(143,215,233,.25);border-radius:14px;overflow:hidden;margin-top:34px;}
+  .com .row{padding:20px 24px;border-bottom:1px solid rgba(143,215,233,.18);display:flex;gap:16px;align-items:flex-start;}
+  .com .row:last-child{border-bottom:none;}
+  .com .no{flex:0 0 auto;font-size:11px;letter-spacing:.2em;color:var(--cyan);padding-top:6px;min-width:26px;}
+  .com b{font-size:15.5px;color:#fff;font-weight:700;letter-spacing:.05em;display:block;margin-bottom:5px;}
+  .com p{font-size:13.5px;color:#94A9B5;line-height:1.95;letter-spacing:.02em;}
+  .ask{margin-top:26px;border-top:1px solid rgba(143,215,233,.22);padding-top:24px;}
+  .ask .lab{font-size:11px;letter-spacing:.24em;color:var(--cyan);margin-bottom:14px;text-align:center;}
+  .ask ul{list-style:none;display:flex;flex-wrap:wrap;gap:9px;justify-content:center;}
+  .ask li{font-size:13px;color:#D7E3E9;background:rgba(255,255,255,.06);border:1px solid rgba(143,215,233,.2);border-radius:8px;padding:9px 15px;letter-spacing:.02em;}
+
+  /* ===== FOLLOW UP ===== */
+  .fu{border-left:1px solid var(--line);padding-left:26px;margin:34px 0 0 6px;}
+  .fu-i{position:relative;padding-bottom:30px;}
+  .fu-i:last-child{padding-bottom:0;}
+  .fu-i::before{content:"";position:absolute;left:-31px;top:9px;width:11px;height:11px;border-radius:50%;background:var(--teal);}
+  .fu-i .p{font-size:10.5px;letter-spacing:.24em;color:var(--teal-l);}
+  .fu-i h4{font-size:16.5px;color:var(--navy);font-weight:700;letter-spacing:.05em;margin:2px 0 8px;}
+  .fu-i p{font-size:13.5px;color:var(--muted);line-height:1.95;letter-spacing:.03em;}
+
+  /* ===== ROAD MAP（12ヶ月ガント） ===== */
+  .gantt-wide{
+    position:relative;margin-top:34px;
+    width:min(1180px,calc(100vw - 40px));
+    margin-left:calc(50% - min(590px,calc(50vw - 20px)));
+  }
+  /* border-radius と overflow は「スクロールする箱」の側に置く。
+     .gantt に overflow:hidden を掛けると、ラベル列の position:sticky が効かなくなる */
+  .gantt-scroll{
+    overflow-x:auto;-webkit-overflow-scrolling:touch;
+    border:1px solid var(--line);border-radius:16px;background:#fff;
+    box-shadow:0 18px 46px rgba(13,26,43,.06);
+  }
+  .gantt{min-width:820px;background:#fff;}
+  .g-row{display:grid;grid-template-columns:186px repeat(12,1fr);align-items:stretch;border-bottom:1px solid var(--line);}
+  .g-row:last-child{border-bottom:none;}
+  .g-row.hd{background:var(--teal);}
+  .g-row.alt{background:#FBFDFE;}
+  .g-lab{
+    position:sticky;left:0;z-index:3;background:#fff;
+    padding:16px 14px 16px 18px;font-size:13px;color:var(--navy);font-weight:700;
+    letter-spacing:.03em;line-height:1.55;border-right:1px solid var(--line);
+    display:flex;flex-direction:column;justify-content:center;
+    box-shadow:7px 0 14px -10px rgba(13,26,43,.35);
+  }
+  .g-lab small{display:block;font-size:11px;color:var(--muted);font-weight:400;letter-spacing:.02em;margin-top:3px;}
+  .g-row.alt .g-lab{background:#FBFDFE;}
+  .g-row.hd .g-lab{background:var(--teal);color:#fff;font-size:11px;letter-spacing:.16em;border-right-color:rgba(255,255,255,.28);}
+  .g-m{
+    text-align:center;font-size:12px;color:#fff;padding:13px 0;letter-spacing:.02em;
+    border-right:1px solid rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;
+  }
+  .g-m:last-child{border-right:none;}
+  .g-cell{min-height:62px;border-right:1px dashed rgba(0,109,130,.13);position:relative;}
+  .g-cell:last-child{border-right:none;}
+  .g-bar{
+    position:absolute;top:50%;transform:translateY(-50%);height:34px;border-radius:17px;
+    color:#fff;font-size:12.5px;letter-spacing:.05em;font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+    padding:0 14px;white-space:nowrap;left:5px;z-index:1;
+    background:linear-gradient(90deg,#00566A 0%,#0A8098 100%);
+    box-shadow:0 6px 16px rgba(0,109,130,.26);
+  }
+  .g-bar.b2{background:linear-gradient(90deg,#00697F 0%,#1E97AF 100%);}
+  .g-bar.b3{background:linear-gradient(90deg,#0B7C93 0%,#3FA8BE 100%);}
+  .g-bar.b4{background:linear-gradient(90deg,#178DA4 0%,#63BFD3 100%);}
+  .g-bar.b5{background:linear-gradient(90deg,#0D1A2B 0%,#28556B 100%);}
+  .g-dot{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:17px;height:17px;border-radius:50%;background:var(--teal);
+    box-shadow:0 0 0 4px rgba(0,109,130,.12);
+  }
+  .g-dot.z{background:#fff;border:2.5px solid var(--teal-l);box-shadow:0 0 0 4px rgba(63,168,190,.12);}
+  .g-legend{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-top:20px;font-size:12.5px;color:var(--muted);letter-spacing:.03em;}
+  .g-legend span{display:flex;align-items:center;gap:8px;}
+  .g-legend i{width:14px;height:14px;border-radius:50%;background:var(--teal);display:inline-block;}
+  .g-legend i.z{background:#fff;border:2.5px solid var(--teal-l);}
+  .scroll-note{text-align:center;font-size:11.5px;color:var(--teal-l);letter-spacing:.1em;margin-top:10px;}
+  @media(min-width:960px){.scroll-note{display:none;}}
+  @media(max-width:700px){
+    .gantt{min-width:700px;}
+    .g-row{grid-template-columns:140px repeat(12,1fr);}
+    .g-lab{padding:13px 10px 13px 13px;font-size:12px;}
+    .g-lab small{font-size:10px;}
+    .g-cell{min-height:56px;}
+    .g-bar{height:30px;font-size:11.5px;padding:0 10px;}
+  }
+
+  /* ===== OPTION ===== */
+  .opt{display:flex;gap:16px;align-items:flex-start;padding:19px 0;border-bottom:1px solid var(--line);}
+  .opt:last-of-type{border-bottom:none;}
+  .opt .no{flex:0 0 auto;font-size:10.5px;letter-spacing:.2em;color:var(--teal-l);padding-top:6px;min-width:26px;}
+  .opt h4{font-size:15.5px;color:var(--navy);font-weight:700;letter-spacing:.04em;}
+  .opt p{font-size:13px;color:var(--muted);line-height:1.9;margin-top:3px;letter-spacing:.02em;}
+
+  /* ===== 写真 ===== */
+  .photo{border-radius:16px;overflow:hidden;margin:36px 0 0;position:relative;}
+  .photo img{width:100%;height:auto;}
+  .photo.fade::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.35) 0%,rgba(255,255,255,0) 34%);pointer-events:none;}
+
+  /* ===== 声 ===== */
+  .voice{padding:30px 0;border-bottom:1px solid rgba(143,215,233,.18);}
+  .voice:last-of-type{border-bottom:none;}
+  .voice .vph{border-radius:14px;overflow:hidden;margin-bottom:22px;}
+  .voice h4{font-size:17px;color:#fff;font-weight:700;line-height:1.8;letter-spacing:.05em;margin-bottom:14px;}
+  .voice p{font-size:14px;color:#AFC0CA;line-height:2.1;letter-spacing:.03em;}
+  .voice .who{margin-top:14px;font-size:13.5px;color:var(--cyan);letter-spacing:.08em;}
+
+  /* ===== 実績 ===== */
+  .rec{display:flex;gap:18px;align-items:baseline;padding:17px 0;border-bottom:1px solid var(--line);}
+  .rec:last-of-type{border-bottom:none;}
+  .rec .cat{flex:0 0 108px;font-size:11.5px;letter-spacing:.05em;color:var(--teal);line-height:1.7;}
+  .rec .val{font-size:15.5px;color:var(--navy);font-weight:700;line-height:1.7;letter-spacing:.04em;}
+  .rec .val small{display:block;font-size:12.5px;color:var(--muted);font-weight:400;margin-top:2px;letter-spacing:.02em;}
+
+  /* ===== プラン ===== */
+  .plan{border:1px solid var(--line);border-radius:15px;overflow:hidden;margin-bottom:16px;position:relative;background:#fff;}
+  .plan-h{padding:26px 26px 20px;border-bottom:1px solid var(--line);}
+  .plan-tag{font-size:10.5px;letter-spacing:.26em;color:var(--teal-l);margin-bottom:7px;}
+  .plan-en{font-size:23px;letter-spacing:.11em;color:var(--navy);line-height:1.25;}
+  .plan-jp{font-size:13.5px;color:var(--navy);font-weight:700;margin-top:4px;letter-spacing:.05em;}
+  .plan-for{font-size:13px;color:var(--muted);margin-top:9px;line-height:1.85;}
+  .plan-b{padding:22px 26px 24px;}
+  .plan-b ul{list-style:none;}
+  .plan-b li{font-size:13.5px;line-height:1.85;padding:6px 0 6px 24px;position:relative;letter-spacing:.02em;}
+  .plan-b li::before{content:"";position:absolute;left:2px;top:13px;width:9px;height:5px;border-left:1.6px solid var(--teal-l);border-bottom:1.6px solid var(--teal-l);transform:rotate(-45deg);}
+  .price{border-top:1px dashed var(--line);margin-top:8px;padding-top:20px;text-align:center;}
+  .price .amt{font-size:33px;color:var(--navy);letter-spacing:.01em;}
+  .price .amt .pre{font-size:14px;color:var(--muted);}
+  .price .free{font-size:31px;color:var(--teal);letter-spacing:.2em;font-weight:700;text-indent:.2em;}
+  .price .sub{font-size:11.5px;color:var(--muted);letter-spacing:.04em;margin-top:6px;line-height:1.8;}
+  .plan.hl{background:linear-gradient(180deg,#0F2537 0%,#031A26 100%);border-color:#12303F;}
+  .plan.hl .plan-h{border-bottom-color:rgba(143,215,233,.2);}
+  .plan.hl .plan-tag{color:var(--cyan);}
+  .plan.hl .plan-en{color:var(--cyan);font-size:19px;letter-spacing:.09em;}
+  .plan.hl .plan-jp{color:#fff;}
+  .plan.hl .plan-for{color:#A3B6C1;}
+  .plan.hl .plan-b li{color:#D7E3E9;}
+  .plan.hl .plan-b li strong{color:#fff;}
+  .plan.hl .plan-b li::before{border-color:var(--cyan);}
+  .plan.hl .price{border-top-color:rgba(143,215,233,.25);}
+  .plan.hl .price .amt{color:#fff;}
+  .plan.hl .price .amt .pre{color:#A3B6C1;}
+  .plan.hl .price .sub{color:#8AA0AD;}
+  .ribbon{position:absolute;top:0;right:0;background:var(--teal);color:#fff;font-size:10.5px;letter-spacing:.16em;padding:7px 15px 7px 18px;border-radius:0 14px 0 13px;}
+  .arrow-d{text-align:center;color:var(--teal-l);font-size:13px;margin:0 0 16px;letter-spacing:.2em;}
+  .arrow-d small{display:block;font-size:11px;color:var(--muted);letter-spacing:.06em;margin-top:-4px;}
+
+  /* ===== 医師 ===== */
+  .doc{
+    border:1px solid var(--line);border-radius:16px;padding:30px 26px;
+    display:grid;grid-template-columns:1fr;gap:26px;text-align:center;
+    background:linear-gradient(180deg,#fff 0%,#FAFDFE 100%);
+  }
+  .doc-ph{border-radius:14px;overflow:hidden;width:min(300px,74%);margin:0 auto;box-shadow:0 14px 34px rgba(13,26,43,.1);}
+  .doc-ph img{width:100%;height:auto;}
+  .doc .role{font-size:10.5px;letter-spacing:.26em;color:var(--teal-l);margin-bottom:12px;}
+  .doc .name{font-size:25px;color:var(--navy);letter-spacing:.24em;font-weight:700;text-indent:.24em;}
+  .doc .name-en{font-size:10.5px;letter-spacing:.28em;color:var(--teal);margin-top:9px;text-indent:.28em;}
+  .doc .aff{font-size:12.5px;color:var(--muted);line-height:1.95;margin-top:13px;}
+  .doc .bio{font-size:13.5px;line-height:2.1;margin-top:18px;padding-top:18px;border-top:1px solid var(--line);text-align:left;letter-spacing:.03em;}
+  @media(min-width:720px){
+    .doc{grid-template-columns:244px 1fr;gap:32px;align-items:start;padding:34px;text-align:left;}
+    .doc-ph{width:100%;margin:0;}
+    .doc .name{text-indent:.24em;}
+    .doc .bio{margin-top:16px;padding-top:16px;}
+  }
+
+  /* ===== FAQ ===== */
+  .faq{border-bottom:1px solid var(--line);}
+  .faq:last-of-type{border-bottom:none;}
+  .faq summary{list-style:none;cursor:pointer;padding:19px 4px;display:flex;gap:13px;align-items:flex-start;font-size:15px;color:var(--navy);font-weight:700;letter-spacing:.04em;line-height:1.8;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::before{content:"Q";color:var(--teal-l);font-size:13px;margin-top:2px;letter-spacing:.1em;}
+  .faq summary::after{content:"＋";margin-left:auto;color:var(--teal-l);font-weight:400;font-size:14px;}
+  .faq[open] summary::after{content:"−";}
+  .faq p{padding:0 4px 20px 26px;font-size:13.5px;color:var(--muted);line-height:2.05;letter-spacing:.03em;}
+
+  /* ===== CTA ===== */
+  .apply{padding-bottom:92px;}
+  .apply-card{border:1px solid rgba(0,109,130,.28);border-radius:16px;padding:46px 28px 42px;text-align:center;background:linear-gradient(180deg,#fff 0%,#F3FAFC 100%);}
+  .apply-card h2{font-size:clamp(21px,5.4vw,27px);color:var(--navy);letter-spacing:.05em;font-weight:700;line-height:1.8;margin:20px 0;}
+  .apply-card .terms{font-size:13.5px;color:var(--muted);line-height:2.1;letter-spacing:.03em;}
+  .apply-card .terms strong{color:var(--navy);}
+  .apply-card hr{border:none;border-top:1px solid var(--line);margin:22px auto;width:68%;}
+  .cta{display:block;width:100%;max-width:400px;margin:26px auto 0;border-radius:10px;background:var(--teal);color:#fff;text-decoration:none;padding:20px 18px;font-size:16.5px;letter-spacing:.14em;font-weight:700;box-shadow:0 14px 30px rgba(0,109,130,.24);transition:all .2s;}
+  .cta:hover{background:var(--teal-d);transform:translateY(-1px);}
+  .cta small{display:block;font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.78);margin-top:6px;font-weight:400;}
+
+  /* ===== sticky / footer ===== */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(3,26,38,.96);border-top:1px solid rgba(143,215,233,.3);padding:10px 16px;display:flex;align-items:center;gap:14px;justify-content:center;}
+  .sticky .t{font-size:11.5px;color:var(--cyan);letter-spacing:.06em;line-height:1.6;}
+  .sticky .t b{display:block;color:#fff;font-size:13.5px;font-weight:700;}
+  .sticky a{background:var(--teal);color:#fff;text-decoration:none;padding:12px 22px;border-radius:8px;font-size:13.5px;letter-spacing:.09em;font-weight:700;white-space:nowrap;}
+  footer{background:var(--deep);color:#7E939F;text-align:center;padding:46px 26px;font-size:12.5px;letter-spacing:.06em;line-height:2.1;}
+  footer .fzm{width:min(46%,208px);margin:0 auto 20px;filter:brightness(0) invert(1);opacity:.92;}
+
+  @media(max-width:420px){
+    .sticky .t{font-size:10.5px;} .sticky a{padding:11px 16px;font-size:12.5px;}
+    .rec{flex-direction:column;gap:4px;} .rec .cat{flex:none;}
+  }
+
+  /* ===== 出現アニメーション（既存LPと同じ、ふわりと上がる） ===== */
+  .reveal{opacity:0;transform:translateY(26px);}
+  .reveal.in{
+    opacity:1;transform:none;
+    transition:opacity 1s cubic-bezier(.22,.61,.36,1),transform 1s cubic-bezier(.22,.61,.36,1);
+  }
+  .fv-in{opacity:0;transform:translateY(20px);}
+  .fv-in.hero-img{transform:scale(1.035);}
+  .loaded .fv-in{
+    opacity:1;transform:none;
+    transition:opacity 1.25s cubic-bezier(.22,.61,.36,1),transform 1.35s cubic-bezier(.22,.61,.36,1);
+  }
+  .loaded .fv-in.d1{transition-delay:.22s;}
+  .loaded .fv-in.d2{transition-delay:.42s;}
+  .loaded .fv-in.d3{transition-delay:.6s;}
+  .loaded .fv-in.d4{transition-delay:.76s;}
+  @media (prefers-reduced-motion: reduce){
+    .reveal,.reveal.in,.fv-in,.loaded .fv-in{opacity:1;transform:none;transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="m serif-en">HIGH PERFORMANCE ATHLETE PROGRAM</div></div>
+
+<!-- ================= FV ================= -->
+<header>
+  <div class="fv-card fv-in hero-img"><img src="assets/fv-key-visual.jpg" alt="細胞医学でアスリートに革新を。"></div>
+  <div class="logotype fv-in d1"><img src="assets/zm-logo.png" alt="ZONE MEDICAL"></div>
+  <div class="fv-copy">
+    <h1 class="fv-in d2"><span class="np">努力は、足りている。</span><br><span class="np">見えていないのは、</span><span class="np"><span class="t">身体の中</span>だ。</span></h1>
+    <p class="fv-sub fv-in d3"><span class="np">練習も、食事も、睡眠もやっている。</span><span class="np">それでも噛み合わない日がある。</span><br><span class="np">その原因は、</span><span class="np"><strong>まだ測っていない場所</strong>に</span><span class="np">あるのかもしれません。</span></p>
+    <div class="chips fv-in d4">
+      <span class="chip">初回相談は無料</span>
+      <span class="chip">分子栄養学専門医が担当</span>
+      <span class="chip">12ヶ月のロードマップ</span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= ① VISION ================= -->
+<div class="dark" style="margin-top:0;">
+  <div class="wrap">
+    <div class="head on-dark">
+      <div class="wm serif-en">VISION</div>
+      <div class="en serif-en">VISION</div>
+      <div class="jp">私たちが目指すもの</div>
+      <div class="bar"></div>
+    </div>
+
+    <h2 class="lead-jp">ゾーンは、才能ではない。<br><span class="t">状態</span>である。</h2>
+    <p class="body-t">力が最大限に出る日と、そうでない日。その差を「気持ち」や「調子」で説明してしまえば、二度と再現できません。ZONE MEDICALは、その差を<strong>身体の中の状態の差</strong>として捉え、細胞レベルまで見える化します。</p>
+    <p class="body-t">目指すのは、一度きりの好調ではありません。<strong>最高の状態を、意図して再現できる身体</strong>をつくること。そのために私たちは、次の3つを同時に追いかけます。</p>
+
+    <div class="pillars">
+      <div class="pil">
+        <div class="n serif-en">01</div>
+        <h4>パフォーマンスを<br>上げる</h4>
+        <p>いま出せていない出力を、身体の内側から引き出す。</p>
+      </div>
+      <div class="pil">
+        <div class="n serif-en">02</div>
+        <h4>怪我を<br>予防する</h4>
+        <p>炎症と回復力を整え、壊れにくい身体の条件をつくる。</p>
+      </div>
+      <div class="pil">
+        <div class="n serif-en">03</div>
+        <h4>選手生命を<br>伸ばす</h4>
+        <p>1シーズンではなく、競技人生の全体で戦えるようにする。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ② WHY ZONE MEDICAL ================= -->
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div class="wm serif-en">WHY</div>
+      <div class="en serif-en">WHY ZONE MEDICAL</div>
+      <div class="jp">なぜ、ZONE MEDICALなのか</div>
+      <div class="bar"></div>
+    </div>
+
+    <h2 class="lead-jp">見ているのは食事ではなく、<br><span class="t">細胞の状態</span>です。</h2>
+    <p class="body-t">一般的なスポーツ栄養が見ているのは、口に入るもの。健康診断が見ているのは、病気かどうか。ZONE MEDICALが見ているのは、<strong>細胞が本来の働きをできているかどうか</strong>です。同じ栄養素を摂っていても、細胞まで届いて使われているかは、選手によってまったく違います。</p>
+
+    <div class="layers3">
+      <div class="l3"><div class="n serif-en">LAYER 1</div><div><h4>食事の内容</h4><p>何を、どれだけ食べたか。一般的な栄養指導が扱う層。</p></div></div>
+      <div class="l3"><div class="n serif-en">LAYER 2</div><div><h4>血液の基準値</h4><p>異常かどうか。健康診断が扱う層。「異常なし」でも、最高とは限らない。</p></div></div>
+      <div class="l3 now"><div class="n serif-en">LAYER 3</div><div><h4>細胞の機能</h4><p>吸収され、運ばれ、細胞の中で実際にエネルギーになっているか。ZONE MEDICALが見る層。</p></div></div>
+    </div>
+
+    <p class="body-t" style="margin-top:40px;">同じ「疲れやすい」でも、原因の層が違えば打つ手は変わります。<strong>思い当たるものを、選んでみてください。</strong></p>
+
+    <div style="margin-top:28px;">
+      <div class="sym-tabs" id="symTabs" role="tablist"></div>
+      <div class="sym-panel" id="symPanel"></div>
+      <p class="note" style="text-align:center;">※ここに出るのは、その症状の背景として<b>疑って測る価値のある候補</b>です。実際にどれが当てはまるかは、検査で特定します。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ③ ZONE MEDICAL ASSET ================= -->
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div class="wm serif-en">ASSET</div>
+      <div class="en serif-en">ZONE MEDICAL ASSET</div>
+      <div class="jp">身体のデータは、資産になる</div>
+      <div class="bar"></div>
+    </div>
+
+    <h2 class="lead-jp">測るほど、<br><span class="t">自分だけの基準</span>が積み上がる。</h2>
+    <p class="body-t">検査は、その日の答え合わせで終わるものではありません。一度取ったデータは残り、次の検査と比べられます。<strong>一般的な基準値ではなく、あなた自身の平常値</strong>が見えてくる。ここからが本当の個別最適です。</p>
+    <p class="body-t">「去年のこの時期はこうだった」「この食事のとき血糖はこう動いた」「あのサプリはこの数値に効いた」。積み上がった記録は、来シーズンの判断材料そのものになります。</p>
+
+    <div class="asset-grid">
+      <div class="as"><div class="n serif-en">01</div><h4>血液栄養解析（70項目）</h4><p>基準値の内外ではなく、最適値からの距離で読む。鉄・ビタミンB群・亜鉛・タンパク質の充足、炎症、肝腎の負荷まで。</p></div>
+      <div class="as"><div class="n serif-en">02</div><h4>CGM（24時間血糖）</h4><p>何を食べたとき、いつ血糖が乱れるか。後半の失速や集中の途切れの正体が見える。</p></div>
+      <div class="as"><div class="n serif-en">03</div><h4>尿有機酸検査（OAT）</h4><p>ミトコンドリアがエネルギーを作れているか。代謝のどこで詰まっているかを細胞レベルで確認する。</p></div>
+      <div class="as"><div class="n serif-en">04</div><h4>GI-MAP（腸内環境）</h4><p>吸収の入口である腸の状態。細菌叢・炎症・消化吸収能。食べても変わらない理由は、ここにあることが多い。</p></div>
+      <div class="as"><div class="n serif-en">05</div><h4>唾液コルチゾール</h4><p>1日のホルモンリズム。オーバートレーニングの兆候と、回復に入れているかどうか。</p></div>
+      <div class="as"><div class="n serif-en">06</div><h4>尿中有害重金属検査</h4><p>水銀・鉛・カドミウムなど、体内に溜まった有害金属。代謝とミトコンドリアの働きを妨げ、疲労が抜けない背景になっていることがある。</p></div>
+    </div>
+
+    <div class="converge">
+      <div class="down"></div>
+      <div class="core">
+        <div class="en serif-en">ZONE MEDICAL ASSET</div>
+        <b>あなた自身の身体のデータ</b>
+        <small>点ではなく、線で蓄積される。<br>競技を続けるかぎり、価値が増えていく記録</small>
+      </div>
+      <div class="down"></div>
+      <div class="next-b">次のシーズンの、意思決定へ</div>
+    </div>
+
+    <div class="photo fade"><img src="assets/photo-data.jpg" alt="検査データの解析"></div>
+    <p class="note">※すべてを最初から行うわけではありません。初回相談で、いま測る価値のあるものだけを選びます。</p>
+  </div>
+</section>
+
+<!-- ================= ④ COMMITMENT ================= -->
+<div class="dark">
+  <div class="wrap">
+    <div class="head on-dark">
+      <div class="wm serif-en">COMMITMENT</div>
+      <div class="en serif-en">COMMITMENT</div>
+      <div class="jp">私たちが約束すること</div>
+      <div class="bar"></div>
+    </div>
+
+    <h2 class="lead-jp">預かるのは、<br>選手の<span class="t">競技人生</span>です。</h2>
+    <p class="body-t">検査を売るのが仕事ではありません。競技の結果につながるところまで責任を持つために、ZONE MEDICALは次の4つを約束します。</p>
+
+    <div class="com">
+      <div class="row"><div class="no serif-en">01</div><div><b>解析も伴走も、医師本人が行う</b><p>検査結果の解析、方針の決定、日々のやりとりまで、担当を分けません。分子栄養学専門医が最初から最後まで見ます。</p></div></div>
+      <div class="row"><div class="no serif-en">02</div><div><b>競技日程を前提に設計する</b><p>試合、遠征、合宿、オフ。競技カレンダーを先に共有いただき、身体を変える時期と崩さない時期を分けて組みます。</p></div></div>
+      <div class="row"><div class="no serif-en">03</div><div><b>アンチ・ドーピングに配慮する</b><p>提案するもの・使用中のものを、所属競技団体の規定に照らして事前に確認したうえで設計します。</p></div></div>
+      <div class="row"><div class="no serif-en">04</div><div><b>感覚ではなく、数値で答え合わせをする</b><p>やりっぱなしにしません。節目ごとに再検査を行い、効いたのか効かなかったのかを数値で確認して次を決めます。</p></div></div>
+    </div>
+
+    <div class="ask">
+      <div class="lab serif-en">WHAT WE ASK OF YOU</div>
+      <ul>
+        <li>食べたもの・体感を、正直に共有していただくこと</li>
+        <li>検査のタイミングを、競技日程と合わせて確保していただくこと</li>
+        <li>すぐに結果が出ない時期も、設計に沿って続けていただくこと</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ⑤ FOLLOW UP ================= -->
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div class="wm serif-en">FOLLOW UP</div>
+      <div class="en serif-en">FOLLOW UP</div>
+      <div class="jp">伴走の方針</div>
+      <div class="bar"></div>
+    </div>
+
+    <h2 class="lead-jp">渡して終わりでは、<br><span class="t">身体は変わらない</span>。</h2>
+    <p class="body-t">検査結果のレポートを渡されて終わり、では何も変わりません。ZONE MEDICALの中心にあるのは、検査そのものではなく、<strong>その後の伴走</strong>です。</p>
+
+    <div class="fu">
+      <div class="fu-i">
+        <div class="p serif-en">01 — RESULT</div>
+        <h4>結果説明は、Zoomで医師から直接</h4>
+        <p>数値を並べるのではなく、「いま何が起きていて、どこがパフォーマンスを止めているか」「だから何を変えるか」を、競技の文脈に翻訳して説明します。</p>
+      </div>
+      <div class="fu-i">
+        <div class="p serif-en">02 — DAILY</div>
+        <h4>日々の疑問は、LINEで無制限に</h4>
+        <p>遠征先のコンビニで何を選ぶか。試合当日の朝食をどうするか。判断に迷う場面はすべて現場で起きます。そこに答えられなければ意味がありません。</p>
+      </div>
+      <div class="fu-i">
+        <div class="p serif-en">03 — ON THE ROAD</div>
+        <h4>遠征・合宿を前提に組み替える</h4>
+        <p>理想の食事ができない環境こそ、設計の出番です。移動が続く時期、宿舎の食事、時差。条件に合わせて現実的な形に落とし込みます。</p>
+      </div>
+      <div class="fu-i">
+        <div class="p serif-en">04 — RE-CHECK</div>
+        <h4>節目ごとに再検査で確認する</h4>
+        <p>体感が良くても数値が動いていないことも、その逆もあります。定期的に測り直し、次の3ヶ月で何に手をつけるかを決め直します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ⑥ ROAD MAP ================= -->
+<section id="roadmap">
+  <div class="wrap">
+    <div class="head">
+      <div class="wm serif-en">ROAD MAP</div>
+      <div class="en serif-en">ROAD MAP</div>
+      <div class="jp">12ヶ月の進め方</div>
+      <div class="bar"></div>
+    </div>
+
+    <h2 class="lead-jp">整える順番は、<br><span class="t">決まっている</span>。</h2>
+    <p class="body-t">身体には、手をつけるべき順番があります。土台が崩れたまま上の層に踏み込んでも、入れたものは働きません。ZONE MEDICALは5つの層を<strong>下から順に</strong>立て直します。だから、手数が少なくて済みます。</p>
+    <p class="body-t">下は、実際にお渡ししている<strong>12ヶ月の設計図</strong>です。開始時期は選手の競技カレンダーに合わせるため、ここでは「何ヶ月目に何をするか」で示しています。</p>
+
+    <div class="gantt-wide">
+      <div class="gantt-scroll">
+        <div class="gantt">
+          <div class="g-row hd">
+            <div class="g-lab serif-en">MONTH</div>
+            <div class="g-m">1</div><div class="g-m">2</div><div class="g-m">3</div><div class="g-m">4</div>
+            <div class="g-m">5</div><div class="g-m">6</div><div class="g-m">7</div><div class="g-m">8</div>
+            <div class="g-m">9</div><div class="g-m">10</div><div class="g-m">11</div><div class="g-m">12</div>
+          </div>
+
+          <div class="g-row">
+            <div class="g-lab">慢性炎症・低血糖・腸内環境<small>すべての土台</small></div>
+            <div class="g-cell"><div class="g-bar" style="width:calc(400% - 10px);">土台を立て直す</div></div>
+            <div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div>
+            <div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div>
+            <div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div>
+          </div>
+
+          <div class="g-row alt">
+            <div class="g-lab">ホルモン・ミトコンドリア・神経伝達物質<small>出力と回復のエンジン</small></div>
+            <div class="g-cell"><div class="g-bar b2" style="width:calc(400% - 10px);">エンジンを上げる</div></div>
+            <div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div>
+            <div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div>
+            <div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div>
+          </div>
+
+          <div class="g-row">
+            <div class="g-lab">カンジダ除菌<small>吸収と炎症の根を断つ</small></div>
+            <div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div>
+            <div class="g-cell"><div class="g-bar b3" style="width:calc(300% - 10px);">除菌</div></div>
+            <div class="g-cell"></div><div class="g-cell"></div>
+            <div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div>
+          </div>
+
+          <div class="g-row alt">
+            <div class="g-lab">デトックス<small>代謝を止めている負荷の排出</small></div>
+            <div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div>
+            <div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div>
+            <div class="g-cell"><div class="g-bar b4" style="width:calc(300% - 10px);">排出</div></div>
+            <div class="g-cell"></div><div class="g-cell"></div>
+            <div class="g-cell"></div><div class="g-cell"></div>
+          </div>
+
+          <div class="g-row">
+            <div class="g-lab">脳・思考のコンディション<small>勝負どころでの再現性</small></div>
+            <div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div>
+            <div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div>
+            <div class="g-cell"></div><div class="g-cell"></div>
+            <div class="g-cell"><div class="g-bar b5" style="width:calc(200% - 10px);">再現性を上げる</div></div>
+            <div class="g-cell"></div>
+          </div>
+
+          <div class="g-row alt">
+            <div class="g-lab">検査 ／ Zoom結果説明<small>節目ごとに答え合わせ</small></div>
+            <div class="g-cell"><span class="g-dot"></span></div>
+            <div class="g-cell"><span class="g-dot z"></span></div>
+            <div class="g-cell"></div>
+            <div class="g-cell"><span class="g-dot"></span></div>
+            <div class="g-cell"><span class="g-dot z"></span></div>
+            <div class="g-cell"></div>
+            <div class="g-cell"></div>
+            <div class="g-cell"><span class="g-dot"></span></div>
+            <div class="g-cell"><span class="g-dot z"></span></div>
+            <div class="g-cell"></div>
+            <div class="g-cell"></div>
+            <div class="g-cell"><span class="g-dot"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-legend">
+        <span><i></i>検査（採血・各種検査）</span>
+        <span><i class="z"></i>Zoom結果説明（医師から直接）</span>
+      </div>
+      <p class="scroll-note">← 横にスクロールできます →</p>
+    </div>
+
+    <p class="note">※上図は標準的な進め方です。実際の開始時期・順番・期間は、競技カレンダーと検査結果に応じて個別に調整します。</p>
+  </div>
+</section>
+
+<!-- ================= ⑦ OPTION ================= -->
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div class="wm serif-en">OPTION</div>
+      <div class="en serif-en">OPTION</div>
+      <div class="jp">必要に応じた個別対応</div>
+      <div class="bar"></div>
+    </div>
+
+    <h2 class="lead-jp">ボトルネックの位置に応じて、<br><span class="t">さらに深く</span>見る。</h2>
+    <p class="body-t">標準の12ヶ月で足りない場合、あるいは特定の課題が明確な場合には、追加の検査・対応を個別にご提案します。</p>
+
+    <div style="margin-top:30px;">
+      <div class="opt"><div class="no serif-en">01</div><div><h4>メチレーション／遺伝子検査</h4><p>体質的に苦手な代謝経路を把握し、サプリメントの選択そのものを個別化する。</p></div></div>
+      <div class="opt"><div class="no serif-en">02</div><div><h4>遅延型アレルギー検査（IgG）</h4><p>毎日のように食べているものが、静かに炎症を起こしていることがある。数日から数週間、ときに数ヶ月遅れて出るため自覚しにくい反応を、食品ごとに確認する。</p></div></div>
+      <div class="opt"><div class="no serif-en">03</div><div><h4>感染症・炎症源の精査</h4><p>ピロリ菌、慢性上咽頭炎、歯性感染など、隠れた炎症源を洗い出す。</p></div></div>
+      <div class="opt"><div class="no serif-en">04</div><div><h4>認知科学コーチング</h4><p>身体が整った先の、思考の癖と再現性。勝負どころでの判断を扱う。</p></div></div>
+      <div class="opt"><div class="no serif-en">05</div><div><h4>チーム・複数選手での導入</h4><p>チーム単位での検査と栄養設計。指導者・トレーナーとの連携を含む。</p></div></div>
+    </div>
+    <p class="note">※内容・費用は個別にご案内します。</p>
+  </div>
+</section>
+
+<!-- ================= VOICE ================= -->
+<div class="dark">
+  <div class="wrap">
+    <div class="head on-dark">
+      <div class="wm serif-en">VOICE</div>
+      <div class="en serif-en">VOICE</div>
+      <div class="jp">アスリートの声</div>
+      <div class="bar"></div>
+    </div>
+
+    <div class="voice">
+      <div class="vph"><img src="assets/voice-sato.jpg" alt="佐藤励選手と寺田武史医師"></div>
+      <h4>レースで戦える身体へ。<br>本来の実力を取り戻すための栄養。</h4>
+      <p>自分に不足している栄養素を明確に知ることで、レース前後の体調管理が大きく変わりました。寺田先生のサポートを通して、特に睡眠の質が上がり、疲労の抜け方がまったく違います。その結果、レースでの集中力やパフォーマンスが安定し、勝負どころで力を発揮できるようになりました。栄養とコーチングの両方を取り入れることで、ようやく「本来の自分」で戦えている感覚があります。</p>
+      <div class="who">オートレーサー　佐藤 励</div>
+    </div>
+
+    <div class="voice">
+      <div class="vph"><img src="assets/voice-okadome.jpg" alt="岡留英貴選手と寺田武史医師"></div>
+      <h4>長く戦うための“土台”を作る、<br>新しい栄養戦略。</h4>
+      <p>自分がどんな栄養素を必要としているかを理解したことで、食事への意識が大きく変わりました。寺田先生と取り組み始めてから、投球のパフォーマンスに直結しているのを実感しています。さらにコーチングが加わることで、シーズンを通して高いレベルで投げ続けられる体づくりができると強く期待しています。</p>
+      <div class="who">プロ野球選手　岡留 英貴</div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= RECORD ================= -->
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div class="wm serif-en">RECORD</div>
+      <div class="en serif-en">RECORD</div>
+      <div class="jp">サポート実績</div>
+      <div class="bar"></div>
+    </div>
+
+    <div class="photo fade" style="margin:0 0 34px;"><img src="assets/photo-athletes.jpg" alt="競技するアスリート"></div>
+
+    <div class="rec"><div class="cat">女子バスケットボール</div><div class="val">オリンピック 銀メダリスト<small>日本代表選手をサポート</small></div></div>
+    <div class="rec"><div class="cat">プロ野球</div><div class="val">オールスター選出選手<small>複数名のコンディションを支援</small></div></div>
+    <div class="rec"><div class="cat">格闘技</div><div class="val">RIZIN 出場選手</div></div>
+    <div class="rec"><div class="cat">オートレース</div><div class="val">SG 3勝<small>賞金ランキング4位</small></div></div>
+    <div class="rec"><div class="cat">ほか多数</div><div class="val">幕内力士・Jリーガー など<small>複数競技のトップ選手をサポート</small></div></div>
+  </div>
+</section>
+
+<!-- ================= PROGRAM ================= -->
+<section id="program">
+  <div class="wrap">
+    <div class="head">
+      <div class="wm serif-en">PROGRAM</div>
+      <div class="en serif-en">PROGRAM</div>
+      <div class="jp">参加の流れと費用</div>
+      <div class="bar"></div>
+    </div>
+
+    <h2 class="lead-jp">まずは<span class="t">1ヶ月</span>だけ、<br>試してみてください。</h2>
+    <p class="body-t">いきなり12ヶ月に踏み込む必要はありません。1ヶ月のトライアルで、自分の身体に何が起きているかを体感する。<strong>そのうえで、次に進むかを決められます。</strong></p>
+
+    <div style="margin-top:36px;">
+      <div class="plan">
+        <div class="ribbon serif-en">START</div>
+        <div class="plan-h">
+          <div class="plan-tag serif-en">Step 1</div>
+          <div class="plan-en serif-en">TRIAL</div>
+          <div class="plan-jp">トライアル｜1ヶ月</div>
+          <div class="plan-for">まずは、負担の少ない形で体感してみたい選手に</div>
+        </div>
+        <div class="plan-b">
+          <ul>
+            <li><span class="np">CGM（Dexcom）</span><span class="np">24時間血糖測定（10日間）</span></li>
+            <li>食事設計の指導（2F+3C）</li>
+            <li>1ヶ月の伴走（無制限LINE栄養相談）</li>
+          </ul>
+          <div class="price"><div class="amt serif-en">&yen;9,800</div><div class="sub">税込・1ヶ月｜CGM費用込み</div></div>
+        </div>
+      </div>
+
+      <div class="arrow-d">▼<small>体感して判断</small></div>
+
+      <div class="plan">
+        <div class="plan-h">
+          <div class="plan-tag serif-en">Step 2</div>
+          <div class="plan-en serif-en">FIRST WIN</div>
+          <div class="plan-jp">ファーストウィン｜3ヶ月</div>
+          <div class="plan-for"><span class="np">まず現在地を数値で知り、</span><span class="np">最初の変化をつかみたい選手に</span></div>
+        </div>
+        <div class="plan-b">
+          <ul>
+            <li><span class="np">CGM（Dexcom）</span><span class="np">24時間血糖測定（10日間）</span></li>
+            <li>血液栄養解析（70項目）</li>
+            <li>食事設計・3ヶ月の伴走</li>
+            <li>無制限LINE相談</li>
+            <li>3ヶ月後 再栄養解析</li>
+          </ul>
+          <div class="price"><div class="amt serif-en">&yen;88,000</div><div class="sub">税込・3ヶ月｜血液栄養解析2回込み<br>サプリメント別途</div></div>
+        </div>
+      </div>
+
+      <div class="arrow-d">▼<small>再解析で判断</small></div>
+
+      <div class="plan hl">
+        <div class="plan-h">
+          <div class="plan-tag serif-en">Step 3</div>
+          <div class="plan-en serif-en">PEAK PERFORMANCE</div>
+          <div class="plan-jp">ピークパフォーマンス｜12ヶ月</div>
+          <div class="plan-for">ロードマップに沿って、シーズンを通して最高を再現したい選手に</div>
+        </div>
+        <div class="plan-b">
+          <ul>
+            <li><span class="np"><strong>ファーストウィンの全内容</strong>＋</span><span class="np">1年間の医療伴走</span></li>
+            <li><strong>12ヶ月ロードマップの設計と実行</strong></li>
+            <li><span class="np">尿有機酸検査</span><span class="np">（ミトコンドリア・代謝）</span></li>
+            <li><span class="np">GI-MAP（腸内環境）／</span><span class="np">尿有害重金属検査</span></li>
+            <li><span class="np">唾液コルチゾール検査</span><span class="np">（副腎・ストレス）</span></li>
+            <li><span class="np">カンジダ除菌（2ヶ月）・</span><span class="np">体内デトックス（3ヶ月）</span></li>
+          </ul>
+          <div class="price"><div class="amt serif-en"><span class="pre">月額</span>&yen;77,000</div><div class="sub">税込・12ヶ月｜各種検査費用込み<br>サプリメント別途</div></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="note" style="text-align:center;">※自由診療（保険適用外）です。<br>※サプリメント（カンジダ除菌・デトックス用を含む）は検査結果に応じて別途。</p>
+  </div>
+</section>
+
+<!-- ================= DOCTOR ================= -->
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div class="wm serif-en">DOCTOR</div>
+      <div class="en serif-en">DOCTOR</div>
+      <div class="jp">監修医師</div>
+      <div class="bar"></div>
+    </div>
+
+    <div class="doc">
+      <div class="doc-ph"><img src="assets/doctor-terada.jpg" alt="寺田武史医師"></div>
+      <div class="doc-body">
+        <div class="role serif-en">Founder &amp; Medical Director</div>
+        <div class="name">寺田 武史</div>
+        <div class="name-en serif-en">TAKESHI TERADA, M.D.</div>
+        <div class="aff">分子栄養学専門医／アクアメディカルクリニック院長<br>株式会社ATIPIX 代表取締役</div>
+        <p class="bio">消化器外科医として臨床に立ち続けたのち、分子栄養学へ。著書<span class="np">『なぜ、人は病気になるのか？』</span><span class="np">『元気なカラダを手に入れる3つのミト育』</span>はいずれもAmazonランキング1位。自身も<span class="np">IRONMANを完走するトライアスリート</span>として、分子栄養学的アプローチを競技の現場で検証し続けています。検査の解析から日々の伴走まで、担当はすべて医師本人が行います。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div class="wm serif-en">FAQ</div>
+      <div class="en serif-en">FAQ</div>
+      <div class="jp">よくあるご質問</div>
+      <div class="bar"></div>
+    </div>
+
+    <details class="faq"><summary>競技レベルの条件はありますか？</summary>
+      <p>競技レベルは限定していません。プロ・実業団・大学・社会人・ジュニアまで、「本気でパフォーマンスを上げたい」という前提が共有できる方であれば対象です。</p></details>
+    <details class="faq"><summary>ロードマップは、シーズンのどこから始めればいいですか？</summary>
+      <p>もっとも大きく身体を変えられるのはオフシーズンなので、そこを起点に組むのが基本です。ただしシーズン中からの開始も可能で、その場合は「崩さない設計」から入り、オフに土台へ踏み込みます。開始時期は初回相談で競技カレンダーを見ながら決めます。</p></details>
+    <details class="faq"><summary>今、特に不調があるわけではありません。それでも意味はありますか？</summary>
+      <p>むしろその状態が適しています。ZONE MEDICALは不調を治す場所ではなく、まだ発揮されていないパフォーマンスの余地を探す場所です。現在地を数値で持っておくこと自体が、シーズンを通した判断材料になります。</p></details>
+    <details class="faq"><summary>サプリメントを飲むだけのプログラムですか？</summary>
+      <p>違います。中心にあるのは検査データの解析と、食事・栄養・睡眠・生活習慣の設計です。サプリメントは、検査結果から必要と判断された場合に、その一部として組み込みます。</p></details>
+    <details class="faq"><summary>アンチ・ドーピングの扱いはどうなりますか？</summary>
+      <p>使用中のもの・提案するものについて、所属競技団体の規定に照らして事前に確認したうえで設計します。制限がある場合は、初回相談の際に必ずお知らせください。</p></details>
+    <details class="faq"><summary>遠征や合宿が多く、来院が難しいのですが。</summary>
+      <p>結果説明や日々のやりとりはZoomとLINEで行います。採血など来院が必要になるタイミングと現実的な進め方は、競技日程を伺ったうえで初回相談で個別に調整します。</p></details>
+    <details class="faq"><summary>どれくらいで変化を感じられますか？</summary>
+      <p>項目と状態によって異なりますが、多くの選手はまず「疲労の抜け方」「睡眠」「日中のエネルギーの安定」といった体感の変化から入ります。数値としての答え合わせは、3ヶ月後の再解析で行います。</p></details>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="apply" id="apply">
+  <div class="wrap">
+    <div class="apply-card">
+      <div class="head" style="margin-bottom:0;">
+        <div class="en serif-en" style="font-size:clamp(20px,5vw,26px);">FIRST STEP</div>
+        <div class="jp">まずは、無料相談から</div>
+        <div class="bar"></div>
+      </div>
+      <h2>まず、自分の身体を<br>知ることから。</h2>
+      <p class="terms"><span class="np">初回相談は<strong>無料</strong>です。</span><span class="np">現在のコンディション、競技の状況、目標を伺ったうえで、</span><br><span class="np">いま測るべきものと、12ヶ月の進め方をご提案します。</span></p>
+      <hr>
+      <p class="terms"><span class="np">お申し込み後、内容を確認のうえ日程調整のご連絡をいたします。</span><br><span class="np">初回相談はZoom・30分、</span><span class="np">医師・寺田武史が担当します。</span></p>
+      <a class="cta" href="https://forms.gle/4AcKLJXKgYbUEjkWA" target="_blank" rel="noopener" id="cta-main">無料で相談する<small class="serif-en">— About 4 minutes —</small></a>
+      <p class="note">※ご回答内容は初回相談の所見作成に使用します。<br>※自由診療（保険適用外）です。</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img class="fzm" src="assets/zm-logo.png" alt="ZONE MEDICAL">
+  監修医師：寺田 武史（分子栄養学専門医）<br>
+  医療法人社団健静会 アクアメディカルクリニック ／ 株式会社ATIPIX<br>
+  ハイパフォーマンス・アスリート専門プログラム
+</footer>
+
+<div class="sticky">
+  <div class="t">初回相談<b>無料で受けられます</b></div>
+  <a href="#apply">相談する</a>
+</div>
+
+<script>
+var SYMPTOMS = [
+  { k:'疲労が抜けない', q:'休んでも、疲労が翌日・翌々日まで残る',
+    causes:['鉄・ビタミンB群の不足','慢性炎症','副腎の疲弊','ミトコンドリア機能の低下'],
+    tests:'血液栄養解析／尿有機酸検査／唾液コルチゾール検査' },
+  { k:'怪我を繰り返す', q:'同じような箇所を、何度も痛める',
+    causes:['慢性炎症','タンパク質・亜鉛・ビタミンDの不足','腸の吸収低下','コラーゲン合成の材料不足'],
+    tests:'血液栄養解析／GI-MAP' },
+  { k:'後半に失速する', q:'試合や練習の後半、動きが落ちるのが自分でもわかる',
+    causes:['血糖の乱高下','鉄不足による酸素運搬の低下','エネルギー産生の詰まり'],
+    tests:'CGM（24時間血糖測定）／血液栄養解析／尿有機酸検査' },
+  { k:'眠っても回復しない', q:'寝ているのに、朝「回復した」感覚が薄い',
+    causes:['夜間の血糖低下','コルチゾールリズムの乱れ','マグネシウム・鉄の不足'],
+    tests:'CGM／唾液コルチゾール検査／血液栄養解析' },
+  { k:'本番で力が出ない', q:'練習ではできるのに、本番で出し切れない',
+    causes:['神経伝達物質の材料不足','低血糖','自律神経の切り替えの鈍さ'],
+    tests:'血液栄養解析／CGM／唾液コルチゾール検査' },
+  { k:'身体が変わらない', q:'食べているのに、体重も筋肉量も変わらない',
+    causes:['消化・吸収能の低下','腸内環境の乱れ','胃酸・消化酵素の不足','慢性炎症'],
+    tests:'GI-MAP／血液栄養解析' }
+];
+
+(function(){
+  var tabs = document.getElementById('symTabs');
+  var panel = document.getElementById('symPanel');
+  function render(i){
+    var s = SYMPTOMS[i];
+    panel.innerHTML =
+      '<p class="q">「<b>' + s.q + '</b>」</p>' +
+      '<div class="arrow"></div>' +
+      '<div class="cause-label serif-en">POSSIBLE CAUSES</div>' +
+      '<ul>' + s.causes.map(function(c){ return '<li>' + c + '</li>'; }).join('') + '</ul>' +
+      '<p class="test">これを確かめる検査：<b>' + s.tests + '</b></p>';
+    [].forEach.call(tabs.children, function(b, j){ b.setAttribute('aria-selected', j === i); });
+  }
+  SYMPTOMS.forEach(function(s, i){
+    var b = document.createElement('button');
+    b.type = 'button'; b.textContent = s.k; b.setAttribute('role','tab');
+    b.addEventListener('click', function(){ render(i); });
+    tabs.appendChild(b);
+  });
+  render(0);
+})();
+
+/* ===== 出現アニメーション ===== */
+(function(){
+  requestAnimationFrame(function(){ document.body.classList.add('loaded'); });
+
+  var SEL = '.head, h2.lead-jp, .body-t, .pil, .layers3, .sym-tabs, .sym-panel,' +
+            '.as, .converge, .com, .ask, .fu-i, .gantt-scroll, .g-legend, .opt,' +
+            '.voice, .rec, .plan, .arrow-d, .doc, .photo, .faq, .apply-card, .note, .pillars';
+  var items = [].slice.call(document.querySelectorAll(SEL));
+  items.forEach(function(el){ el.classList.add('reveal'); });
+
+  if(!('IntersectionObserver' in window)){
+    items.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var el = e.target;
+      var delay = parseInt(el.dataset.rd || 0, 10);
+      setTimeout(function(){ el.classList.add('in'); }, delay);
+      io.unobserve(el);
+    });
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+
+  /* 同じ行に並ぶカードは、少しずつ遅らせて出す */
+  ['.pil', '.as', '.rec', '.opt'].forEach(function(sel){
+    var group = [].slice.call(document.querySelectorAll(sel));
+    group.forEach(function(el, i){ el.dataset.rd = (i % 6) * 90; });
+  });
+
+  items.forEach(function(el){ io.observe(el); });
+})();
+</script>
+
+</body>
+</html>
